@@ -37,10 +37,6 @@ paths = (
 	'/ProgramData/'
 	)
 
-paths = (
-	'/Users/bulletfarmer/Desktop/dummy/'
-)
-
 for root, dirs, files in chain.from_iterable(walk(path) for path in paths):
 	for file_name in files:
 		filename = join(root, file_name)
