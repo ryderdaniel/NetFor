@@ -26,7 +26,7 @@ def prepare():
 def encrypt(filename):
 	cipher = prepare()
 	with open(filename, "rb") as f:
-		data = f.read()
+		plaintext = f.read()
 	with open(filename, "wb") as f:
 		f.write(cipher.encrypt(pad(plaintext, 16)))
 
