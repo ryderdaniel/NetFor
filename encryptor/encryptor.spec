@@ -3,7 +3,7 @@
 
 a = Analysis(
     ['encryptor.py'],
-    pathex=['C:\\\\Python311\\\\Lib\\\\site-packages', 'C:\\\\Python311'],
+    pathex=['C:\\Python311\\Lib\\site-packages', 'C:\\Python311'],
     binaries=[],
     datas=[],
     hiddenimports=[],
